@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Minomize - Video Summarizer",
+  "version": "1.0.0",
+  "description": "Get shortened versions of YouTube videos with AI-powered summaries and flashcards",
+  "permissions": [
+    "activeTab",
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "http://localhost:3000/*",
+    "http://100.70.34.122:3001/*",
+    "http://127.0.0.1:*/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/watch*",
+        "https://youtube.com/watch*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Minomize",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+} 

@@ -1,0 +1,187 @@
+/* Minomize button styles for YouTube integration */
+.minomize-button-container {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.minomize-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  
+  /* Button styling to match YouTube */
+  background: transparent;
+  border: 1px solid #3ea6ff;
+  border-radius: 18px;
+  color: #3ea6ff;
+  
+  /* Sizing */
+  height: 36px;
+  padding: 0 16px;
+  min-width: 0;
+  
+  /* Typography */
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  text-transform: none;
+  letter-spacing: 0.25px;
+  
+  /* Interaction */
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  
+  /* Remove default button styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+}
+
+.minomize-btn:hover:not(:disabled) {
+  background-color: rgba(62, 166, 255, 0.1);
+  border-color: #3ea6ff;
+}
+
+.minomize-btn:focus {
+  outline: 2px solid #3ea6ff;
+  outline-offset: 2px;
+}
+
+.minomize-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Icon styling */
+.minomize-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Text styling */
+.minomize-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Processing state */
+.minomize-btn.processing {
+  border-color: #ff9500;
+  color: #ff9500;
+}
+
+.minomize-btn.processing:hover {
+  background-color: rgba(255, 149, 0, 0.1);
+}
+
+/* Completed state */
+.minomize-btn.completed {
+  border-color: #00c851;
+  color: #00c851;
+}
+
+.minomize-btn.completed:hover {
+  background-color: rgba(0, 200, 81, 0.1);
+}
+
+/* Error state */
+.minomize-btn.error {
+  border-color: #ff4444;
+  color: #ff4444;
+}
+
+.minomize-btn.error:hover {
+  background-color: rgba(255, 68, 68, 0.1);
+}
+
+/* Dark theme support (YouTube's dark theme) */
+@media (prefers-color-scheme: dark) {
+  .minomize-btn {
+    border-color: #3ea6ff;
+    color: #3ea6ff;
+  }
+  
+  .minomize-btn:hover:not(:disabled) {
+    background-color: rgba(62, 166, 255, 0.15);
+  }
+  
+  .minomize-btn.processing {
+    border-color: #ffb347;
+    color: #ffb347;
+  }
+  
+  .minomize-btn.processing:hover {
+    background-color: rgba(255, 179, 71, 0.15);
+  }
+  
+  .minomize-btn.completed {
+    border-color: #4caf50;
+    color: #4caf50;
+  }
+  
+  .minomize-btn.completed:hover {
+    background-color: rgba(76, 175, 80, 0.15);
+  }
+  
+  .minomize-btn.error {
+    border-color: #f44336;
+    color: #f44336;
+  }
+  
+  .minomize-btn.error:hover {
+    background-color: rgba(244, 67, 54, 0.15);
+  }
+}
+
+/* YouTube-specific overrides for better integration */
+html[dark] .minomize-btn,
+[dark] .minomize-btn,
+.minomize-btn[data-theme="dark"] {
+  border-color: #3ea6ff;
+  color: #3ea6ff;
+}
+
+html[dark] .minomize-btn:hover:not(:disabled),
+[dark] .minomize-btn:hover:not(:disabled),
+.minomize-btn[data-theme="dark"]:hover:not(:disabled) {
+  background-color: rgba(62, 166, 255, 0.15);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .minomize-btn {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 13px;
+    line-height: 32px;
+  }
+  
+  .minomize-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .minomize-text {
+    display: none; /* Hide text on mobile, show only icon */
+  }
+}
+
+/* Very small screens - icon only */
+@media (max-width: 480px) {
+  .minomize-btn {
+    width: 40px;
+    height: 32px;
+    padding: 0;
+    border-radius: 16px;
+  }
+  
+  .minomize-text {
+    display: none;
+  }
+} 

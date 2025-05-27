@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minomize</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <img src="icon.png" alt="Minomize" class="popup-logo">
+      <h1 class="popup-title">Minomize</h1>
+    </header>
+
+    <main class="popup-content">
+      <div id="youtube-section" class="section">
+        <div class="status-indicator" id="youtube-status">
+          <div class="status-icon">📺</div>
+          <div class="status-text">
+            <h3>YouTube Integration</h3>
+            <p id="youtube-status-text">Visit a YouTube video to get started</p>
+          </div>
+        </div>
+        
+        <button id="process-current-video" class="action-button" disabled>
+          <span class="button-icon">✨</span>
+          <span class="button-text">Minomize This Video</span>
+        </button>
+      </div>
+
+      <div class="section">
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">📝</span>
+            <span>AI Summaries</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎯</span>
+            <span>Key Points</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📚</span>
+            <span>Flashcards</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="processing-jobs" id="processing-jobs">
+          <h4>Recent Processing</h4>
+          <div id="jobs-list" class="jobs-list">
+            <p class="no-jobs">No recent processing jobs</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="popup-footer">
+      <div class="footer-links">
+        <a href="#" id="open-website" class="footer-link">Open Minomize</a>
+        <a href="#" id="help-link" class="footer-link">Help</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 
