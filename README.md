@@ -69,7 +69,7 @@ Update the `host_permissions` array:
 ## File Structure
 
 ```
-minomize-chrome/
+mino-chrome/
 ├── manifest.json          # Extension configuration
 ├── content.js            # Content script (runs on YouTube pages)
 ├── content.css           # Styles for the Minomize button
